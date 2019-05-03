@@ -1,0 +1,73 @@
+/* Normalize the lists */
+.menu,
+.sub-menu {
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+  }
+}
+
+/* Baseline for menu */
+.navigation {
+    line-height: 1;
+    border-radius: 1em;
+    .menu {
+      a,
+      li {
+        display: block;
+      }
+  
+      a {
+        text-decoration: none;
+        color: currentColor;
+        padding: 1em;
+      }
+  
+      li {
+        border-style: solid;
+        border-width: 0 0 1px;
+      }
+    }
+  }
+
+  /* Screen breakpoints  */
+@media only screen and (min-width: 1024px) {
+    /* Baseline */
+    .navigation {
+      .menu {
+        display: flex; 
+        > li {
+          border-width: 0 1px 0 0;
+          > a {
+            padding: 1.25em 1.5em;
+          }
+        }
+      }
+    }
+}
+/* Easy theming */
+
+$menu-color: rgba(white, .75);
+$menu-bg: #222;
+$menu-item-hover-color: rgba(white, .9);
+$menu-item-hover-bg: black;
+$menu-item-border-color: lighten($menu-bg, 3%);
+
+.navigation {
+  background-color: #00b894;
+  color: $menu-color;
+  .menu {
+    li {
+        color: rgba(255, 255, 255, .9);
+      &:hover,
+      &:focus,
+      &:active {
+        > a {
+            color: white;
+            background-color: rgba(255, 255, 255, .1);
+        }
+      }
+    }
+  }
+}

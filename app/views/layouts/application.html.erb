@@ -10,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+      <nav class="navigation">
+          <ul class="menu">
+            <li><%= link_to 'My Blog', controller: 'articles' %></li>
+            <li><%= link_to 'New article', new_article_path %></li>
+          </ul><!-- .menu -->
+        </nav><!-- .navigation -->
+      <%= yield %>
   </body>
 </html>
