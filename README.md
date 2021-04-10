@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Blog
 
-Things you may want to cover:
+The application is based on materials from the site [guides.rubyonrails](https://guides.rubyonrails.org/)
 
-* Ruby version
+[Blog](https://infinite-brook-79881.herokuapp.com/) - heroku deployed example
 
-* System dependencies
+### Requirements
 
-* Configuration
+`ruby >= 2.6.7`
 
-* Database creation
+`rails ~> 5.2.5`
 
-* Database initialization
+### Installation & using
 
-* How to run the test suite
+In `terminal` or `cmd`
 
-* Services (job queues, cache servers, search engines, etc.)
+- `$ git@github.com:sas2job/blog.git`
 
-* Deployment instructions
+- `$ gem install bundler` - if needed
 
-* ...
+- `$ bundle install`
+
+- `$ rails db:migrate`
+
+- `$ rails s` for server starting
+
+Then open `http://localhost:3000` at your web-browser
